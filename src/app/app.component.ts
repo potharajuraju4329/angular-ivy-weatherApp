@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'weatherApp';
-  weatherDataArray =[1,2,4]
-  constructor(public router:Router){}
-
+  constructor(public router: Router) {}
 }

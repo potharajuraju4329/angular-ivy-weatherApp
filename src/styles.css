@@ -1,1 +1,9 @@
-/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.bg-light {
+  background: linear-gradient(to right, #33ccff 0%, #33ccff 100%) !important;
+}
+.title-color {
+  color: white;
+}
