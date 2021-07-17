@@ -9,7 +9,6 @@ export class WeatherService {
 
   //Get the weather data of city
   loadWeatherData(): Observable<any> {
-    console.log('inside');
     return this.http
       .get(
         'https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=3d8b309701a13f65b660fa2c64cdc517'
