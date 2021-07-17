@@ -11,7 +11,7 @@ export class WeatherService {
     console.log('inside');
     return this.http
       .get(
-        'http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=3d8b309701a13f65b660fa2c64cdc517'
+        'https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=3d8b309701a13f65b660fa2c64cdc517'
         // 'https://api.openweathermap.org/data/2.5/find?lat=51.5085&lon=-0.1257&cnt=5&appid=3d8b309701a13f65b660fa2c64cdc517'
       )
       .pipe(map(res => res));
