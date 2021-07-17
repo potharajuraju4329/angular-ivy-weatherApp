@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -8,5 +7,5 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'weatherApp';
-  constructor(public router: Router) {}
+  constructor() {}
 }

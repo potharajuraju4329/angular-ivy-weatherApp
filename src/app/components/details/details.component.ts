@@ -15,16 +15,16 @@ export class DetailsComponent {
   selectedCity: any;
   seaLevelDataArray: Array<any> = [];
   ngOnInit() {
+    // get the selected city id
     this.route.params.subscribe(params => {
-      console.log(params);
-      console.log(params['id']);
       this.selectedCity = params['id'];
     });
+
+    // Call the openweatherapi to get next 5 days weather data
     this.weatherService.next5DaysSeaLevel(this.selectedCity).subscribe(
       (res: any) => {
         if (res.cod == 200) {
           this.seaLevelDataArray = res.list;
-          console.log('res', this.seaLevelDataArray);
         }
       },
       (error: any) => {

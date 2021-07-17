@@ -9,22 +9,16 @@ import { WeatherService } from '../../Common/weather.service';
 })
 export class HomeComponent {
   title = 'weatherApp';
-  cities = [
-    'City of London',
-    'London',
-    'City of Westminster',
-    'Lambeth',
-    'Clerkenwell',
-    'City of London'
-  ];
+
   constructor(private weatherService: WeatherService, public router: Router) {}
   weatherDataArray: Array<any> = [];
+
   ngOnInit() {
+    //call the openweatherapi to get the weather data of city
     this.weatherService.loadWeatherData().subscribe(
       (res: any) => {
         if (res.cod == 200) {
           this.weatherDataArray.push(res);
-          console.log('res', this.weatherDataArray);
         }
       },
       (error: any) => {
@@ -33,8 +27,8 @@ export class HomeComponent {
     );
   }
 
+  //navigate to details component
   rowClicked(item: any) {
-    console.log('item', item);
     this.router.navigate(['Home/details', { id: item.id }]);
   }
 }
