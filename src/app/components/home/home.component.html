@@ -1,0 +1,22 @@
+ 
+<div class="container-fluid">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">City name</th>
+      <th scope="col">Temp.</th>
+      <th scope="col">Sunrise</th>
+      <th scope="col">sunset</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of weatherDataArray" (click)="rowClicked(item)">
+      <td>{{item.name}}</td>
+      <td>{{item.main.temp}}</td>
+      <td>{{item.sys.sunrise}}</td>
+      <td>{{item.sys.sunset}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

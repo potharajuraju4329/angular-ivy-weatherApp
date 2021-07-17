@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Sea Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of seaLevelDataArray">
+        <td>{{item.dt_txt | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+        <td>{{item.main.sea_level}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
