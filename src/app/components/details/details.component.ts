@@ -20,7 +20,7 @@ export class DetailsComponent {
       console.log(params['id']);
       this.selectedCity = params['id'];
     });
-    this.weatherService.seaLevel(this.selectedCity).subscribe(
+    this.weatherService.next5DaysSeaLevel(this.selectedCity).subscribe(
       (res: any) => {
         if (res.cod == 200) {
           this.seaLevelDataArray = res.list;

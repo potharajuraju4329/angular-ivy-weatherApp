@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
 export class WeatherService {
   constructor(private http: HttpClient) {}
 
+  //Get the weather data of city
   loadWeatherData(): Observable<any> {
     console.log('inside');
     return this.http
@@ -16,7 +17,8 @@ export class WeatherService {
       )
       .pipe(map(res => res));
   }
-  seaLevel(id: any) {
+  //Get the next 5 days weather data of city
+  next5DaysSeaLevel(id: any) {
     return this.http
       .get(
         'https://api.openweathermap.org/data/2.5/forecast?id=' +
